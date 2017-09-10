@@ -2,7 +2,7 @@
 title: 'Fresh Install'
 ---
 
-**Congrats on owning a Raspberry Pi. Let's start by getting Raspbian and installing it!**
+>>>>>> **Congrats on owning a Raspberry Pi. Let's start by getting Raspbian and installing it!**
 
 ##### Getting an image
 
@@ -18,4 +18,3 @@ Use the Formatting Tool to format as FAT32. Keep the default "quick format" on, 
 
 In this case, your SD card is actually an SDXC card. Use the Formatting Tool as described above. At this point, the card is formatted as exFAT. Raspbian doesn't like exFAT, so the next step is to get that into FAT32 by downloading a tool called Fat32 Format from [http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm). Run it with its default settings on your SDXC card and it should now be formatted as FAT32.
 
->>> Note
