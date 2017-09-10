@@ -4,7 +4,9 @@ title: 'Fresh Install'
 
 >>> **Congrats on owning a Raspberry Pi. Let's start by getting Raspbian and installing it!**
 
-##### Getting an image
+# Putting Raspbian on your Raspberry Pi
+
+## Download the image file
 
 Download Raspbian Lite from [https://www.raspberrypi.org/downloads/raspbian/](https://www.raspberrypi.org/downloads/raspbian/). I'd recommend using Lite, because by only including the necessary packages, it speeds up the installation process considerably. In addition, performance out of the box will be faster without a bunch of excess weighing you down.
 
