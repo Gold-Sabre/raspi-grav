@@ -3,6 +3,10 @@ title: 'Fresh Install'
 ---
 
 >>>>>> **Congrats on owning a Raspberry Pi. Let's start by getting Raspbian and installing it!**
+>>>>> test
+>>>> test
+>>> test
+
 
 ##### Getting an image
 
