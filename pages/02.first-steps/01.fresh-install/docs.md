@@ -26,7 +26,7 @@ In this case, your SD card is actually an SDXC card. Use the Formatting Tool as 
 
 Grab a tool called Win32DiskImager from [https://sourceforge.net/projects/win32diskimager/](https://sourceforge.net/projects/win32diskimager/). Select the Raspbian Lite .img file, your SD card, and click "Write". Once it's done you can exit safely.
 
->>>>> [The official instructions](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) now suggest using a tool called Etcher from [https://etcher.io/](https://etcher.io/). Feel free to give that a try.
+>>>>> The [official instructions](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) now suggest using a tool called Etcher from [https://etcher.io/](https://etcher.io/). Feel free to give that a try.
 
 ## Let's get physical
 
