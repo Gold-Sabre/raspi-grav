@@ -57,9 +57,9 @@ $ sudo raspi-config
 * If you run the command `date` and it's wildly off, you may have to use `sudo service ntp restart` to get it back in sync
 * **Change Locale** > Select a locale from the list, such as **en_CA.UTF-8 UTF-8**
 2. **Update** > Let the tool update itself, since some options may not be present until you do so
-3. **Advanced Options** > **Memory Split** > Type in "16". Since we don't even have a GUI installed, we can use all that RAM for other cool stuff.
+3. **Advanced Options** > **Memory Split** > Type in **16** - Since we don't even have a GUI installed, we can use all that RAM for other cool stuff.
 4. **Hostname** > Type in whatever you'd like. Be witty, be boring, whatever makes you sleep well at night. 
-5. **Interfacing Options** > **SSH** > **Yes** We really want to be connecting to this via SSH over your local network, rather than connecting all of these knarly wires. 
-6. **Boot Options** > **Desktop / CLI** > **Console** Let's make sure we're going to CLI on boot, even though that's how we connected in the first place.
+5. **Interfacing Options** > **SSH** > **Yes** - We really want to be connecting to this via SSH over your local network, rather than connecting all of these knarly wires. 
+6. **Boot Options** > **Desktop / CLI** > **Console** - Let's make sure we're going to CLI on boot, even though that's how we connected in the first place.
 7. **Change User Password** > Ideally you should use a randomized and unique password, but do the best you can.
 * >>> Password managers are awesome, arguably more important than anti-virus software, free in a variety of flavours, and make your life much easier. Need to make an account? No problem, whip up a 32+ character password using all character sets and you don't even have to remember it. Beats a collection of half-forgotten, hand-written passwords with reused, easily brute-forcable combinations.
