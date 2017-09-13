@@ -32,7 +32,27 @@ Grab a tool called Win32DiskImager from [https://sourceforge.net/projects/win32d
 
 It's time to actually touch the Raspberry Pi! Connect it to a monitor, keyboard, mouse, and ethernet cable. Slide in your freshly minted Raspbian SD card. Connect the power adapter and it will boot immediately. 
 
->>>>> The [official installation instructions](https://www.raspberrypi.org/documentation/installation/noobs.md) say that Raspbian Lite requires an internet connection to install. I have a Pi 2, so a physical network connection is my only option. I'm unsure how installing Raspbian Lite over WiFi would work, so you're on your own for that.
+>>> If you encounter any issues here, the formatting and imaging of your SD card might have been borked at some point; try again, following these instructions. If it still doesn't work, Google is your friend.
 
-Select Raspbian as the operating system and run through the installation. If you encounter any issues here, something might be wrong with your network connection, or the formatting and imaging of your SD card might have been borked at some point; try again, following these instructions, and if it still doesn't work, Google is your friend.
+##### Basic configuration
 
+You should be prompted to log in. Use the default credentials to do so.
+
+```
+raspberrypi login: pi
+Password: raspberry
+```
+Neat, it's even got some colour to it! Now, we're going to run through Raspbian's built-in configuration tool `raspi-config` to start things off. Navigate using the **Arrow Keys**, **Enter** to select and go forward, **Esc** to go back, and **Ctrl-C** to cancel the program.
+
+```bash
+$ sudo raspi-config
+```
+>>>>>> This might be your first run-in with the phrase _"Script must be run as root. Try 'sudo raspi-config'"_. You can read all about running around as root elsewhere, but I'd recommend **not** tinkering with this; instead, get used to putting `sudo` in front of any commands requiring elevated privileges.
+
+1. **Localisation Options** - it's imperative to start here if you don't live in the UK. By default, Raspbian's keyboard is set to a UK layout, which will likely totally mess up your password and leave you scratching your head when you can't log in. 
+* **Change Keyboard Layout** > **Generic 105-key (Intl) PC** > **Other** > **English (US)** > Choose all the defaults
+* >>>>> Alternately, choose whatever keyboard layout you're using.
+* _At this point a reboot may be required. I can't remember if `raspi-config` prompts you, or if you have to do it yourself. If you need to reboot at the commandline, use `sudo reboot` or `sudo shutdown -r now`_
+* Test your **Shift-12345** keys at the command line to make sure the correct keyboard layout is applied.
+* **Change Timezone** > Navigate to your location to select a timezone
+* 
