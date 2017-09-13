@@ -34,7 +34,7 @@ It's time to actually touch the Raspberry Pi! Connect it to a monitor, keyboard,
 
 >>> If you encounter any issues here, the formatting and imaging of your SD card might have been borked at some point; try again, following these instructions. If it still doesn't work, Google is your friend.
 
-##### Basic configuration
+##### Run through raspi-config
 
 You should be prompted to log in. Use the default credentials to do so.
 
