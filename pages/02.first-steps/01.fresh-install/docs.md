@@ -50,8 +50,7 @@ $ sudo raspi-config
 >>>>>> This might be your first run-in with the phrase _"Script must be run as root. Try 'sudo raspi-config'"_. You can read all about running around as root elsewhere, but I'd recommend **not** tinkering with this; instead, get used to putting `sudo` in front of any commands requiring elevated privileges.
 
 1. **Localisation Options** - it's imperative to start here if you don't live in the UK. By default, Raspbian's keyboard is set to a UK layout, which will likely totally mess up your password and leave you scratching your head when you can't log in. 
-* **Change Keyboard Layout** > **Generic 105-key (Intl) PC** > **Other** > **English (US)** > Choose all the defaults
-* >>>>> Alternately, choose whatever keyboard layout you're using.
+* **Change Keyboard Layout** > **Generic 105-key (Intl) PC** > **Other** > **English (US)** > Choose all the defaults. Alternately, choose whatever keyboard layout you're using.
 * _At this point a reboot may be required. I can't remember if `raspi-config` prompts you, or if you have to do it yourself. If you need to reboot at the commandline, use `sudo reboot` or `sudo shutdown -r now`_
 * Test your **Shift-12345** keys at the command line to make sure the correct keyboard layout is applied.
 * **Change Timezone** > Navigate to your location to select a timezone
