@@ -55,9 +55,9 @@ $ sudo raspi-config
 * Test your **Shift-12345** keys at the command line to make sure the correct keyboard layout is applied.
 * **Change Timezone** > Navigate to your location to select a timezone
 * If you run the command `date` and it's wildly off, you may have to use `sudo service ntp restart` to get it back in sync
-* **Update** > Let the tool update itself, since some options may not be present until you do so
-* **Advanced Options** > **Memory Split** > Type in "16". Since we don't even have a GUI installed, we can use all that RAM for other cool stuff.
-* **Hostname** > Type in whatever you'd like. Be witty, be boring, whatever makes you sleep well at night. 
-* **Interfacing Options** > **SSH** > **Yes** We really want to be connecting to this via SSH over your local network, rather than connecting all of these knarly wires. 
-* **Boot Options** > **Desktop / CLI** > **Console** Let's make sure we're going to CLI on boot, even though that's how we connected in the first place.
-* **Change User Password** > 
+2. **Update** > Let the tool update itself, since some options may not be present until you do so
+3. **Advanced Options** > **Memory Split** > Type in "16". Since we don't even have a GUI installed, we can use all that RAM for other cool stuff.
+4. **Hostname** > Type in whatever you'd like. Be witty, be boring, whatever makes you sleep well at night. 
+5. **Interfacing Options** > **SSH** > **Yes** We really want to be connecting to this via SSH over your local network, rather than connecting all of these knarly wires. 
+6. **Boot Options** > **Desktop / CLI** > **Console** Let's make sure we're going to CLI on boot, even though that's how we connected in the first place.
+7. **Change User Password** > 
