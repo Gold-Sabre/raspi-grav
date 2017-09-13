@@ -51,7 +51,7 @@ $ sudo raspi-config
 
 1. **Localisation Options** - it's imperative to start here if you don't live in the UK. By default, Raspbian's keyboard is set to a UK layout, which will likely totally mess up your password and leave you scratching your head when you can't log in. 
 * **Change Keyboard Layout** > **Generic 105-key (Intl) PC** > **Other** > **English (US)** > Choose all the defaults. Alternately, choose whatever keyboard layout you're using.
-* _At any point when changing these settings, a reboot may be required. I can't remember which options cause `raspi-config` to prompt you for a reboot, but if you ever have to do it yourself, use `sudo reboot` or `sudo shutdown -r now`_
+* _At any point when changing these settings, a reboot may be required. I can't remember which options cause `raspi-config` to prompt you for a reboot, but if you ever have to do it yourself, you can use `sudo reboot` or `sudo shutdown -r now`_
 * Test your **Shift-12345** keys at the command line to make sure the correct keyboard layout is applied.
 * **Change Timezone** > Navigate to your location to select a timezone
 * If you run the command `date` and it's wildly off, you may have to use `sudo service ntp restart` to get it back in sync
