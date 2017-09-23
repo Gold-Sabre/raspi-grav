@@ -34,14 +34,15 @@ It's time to actually touch the Raspberry Pi! Connect it to a monitor, keyboard,
 
 >>> If you encounter any issues here, the formatting and imaging of your SD card might have been borked at some point; try again, following these instructions. If it still doesn't work, Google is your friend.
 
-##### Run through raspi-config
-
 You should be prompted to log in. Use the default credentials to do so.
 
 ```
 raspberrypi login: pi
 Password: raspberry
 ```
+
+##### Run through raspi-config
+
 Neat, it's even got some colour to it! Now, we're going to run through Raspbian's built-in configuration tool `raspi-config` to start things off. Navigate using the **Arrow Keys**, **Enter** to select and go forward, **Esc** to go back, and **Ctrl-C** to cancel the program.
 
 ```bash
