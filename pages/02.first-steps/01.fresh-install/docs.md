@@ -69,7 +69,7 @@ $ sudo raspi-config
 
 ##### Configure your networking
 
->>>>> I'm assuming that your home network is in the local range 192.168.1.0/24. If you don't know, log into your router's web interface (usually http://192.168.1.1 or written on your router) and figure it out. Replace any IPs I use with what's appropriate for your network.
+>>>>> I'm assuming that your home network is in the local range 192.168.1.0/24. If you don't know, log into your router's web interface (usually [http://192.168.1.1](192.168.1.1) or written on your router) and figure it out. Replace any IPs I use with what's appropriate for your network.
 
 Let's get your raspi set up on your network. To start, visit your router's web interface and determine what your DHCP range is. This is the set of addresses your router will automatically hand out to devices that connect to it. We'll be setting your raspi's IP to a static value **outside** this DHCP range, so that any firewall rules we make later on can stay the same.
 
