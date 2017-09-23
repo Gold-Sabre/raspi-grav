@@ -4,8 +4,7 @@ published: true
 date: '2017-09-23 15:22'
 ---
 
->>> ###### This website is under construction!
-**If you're reading this, I'm not done with this website. I have no schedule to which I adhere, so it'll be done when it's done!**
+>>> **This website is actively under construction!** If you're reading this, I'm not done with this website. I have no schedule to which I adhere, so it'll be done when it's done!
 
 ##### My Goal
 Hi there! I want to provide step-by-step tutorials on how to set up and run various handy services using a Raspberry Pi. These guides will be limited to the realm of a homelab type environment, and only cover things that I've done myself and managed to get working. To write the content of this site, I'm translating my personal rough notes into beautified, followable, and understandable pages. 
