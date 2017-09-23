@@ -74,7 +74,7 @@ $ sudo raspi-config
 Let's get your raspi set up on your network. To start, visit your router's web interface and determine what your DHCP range is. This is the set of addresses your router will automatically hand out to devices that connect to it. We'll be setting your raspi's IP to a static value **outside** this DHCP range, so that any firewall rules we make later on can stay the same.
 
 Now, let's make the appropriate configuration changes:
-1. Run `ifconfig` to determine the name of your raspi's network adapter. There will be a Loopback address titled **lo**; ignore this. The other one, for me, is **eth0**; if you're using wireless, it's likely different. Make a note of this.
+1. Run `ifconfig` to determine the name of your raspi's network adapter. There will be a Loopback address titled **lo**; ignore this. The other one, for me, is **eth0**. If you're using wireless, it's likely different. Make a note of this adapter name.
 
 >>>>> For a text editor I find it easiest to use the pi's default text editor `nano`. If you want to get into a circlejerk about how great `vim` is, why are you reading this guide?
 
