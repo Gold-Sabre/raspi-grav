@@ -74,11 +74,13 @@ $ sudo raspi-config
 Let's get your raspi set up on your network. To start, visit your router's web interface and determine what your DHCP range is. This is the set of addresses your router will automatically hand out to devices that connect to it. We'll be setting your raspi's IP to a static value **outside** this DHCP range, so that any firewall rules we make later on can stay the same.
 
 Now, let's make the appropriate configuration changes:
+
 1. Run `ifconfig` to determine the name of your raspi's network adapter. There will be a Loopback address titled **lo**; ignore this. The other one, for me, is **eth0**. If you're using wireless, it's likely different. Make a note of this adapter name.
 
 >>>>> For a text editor I find it easiest to use the pi's default text editor `nano`. If you want to get into a circlejerk about how great `vim` is, why are you reading this guide?
 
 2. Run `sudo nano /etc/dhcpcd.conf` and navigate to the bottom with the arrow keys and using your keyboard just like a normal text editor. Write in the following configuration, substituting details where appropriate for your own network (I'm using Google's DNS servers for simplicity):
+
 ```
 # Static IP details (today's date)
 interface eth0
@@ -86,7 +88,9 @@ static ip_address=192.168.1.101
 static routers=192.168.1.1
 static domain_name_servers=8.8.8.8 8.8.4.4
 ```
-When done, press **Ctrl-X**, **y**, and **Enter** to save your changes and exit. 
+
+When done, press **Ctrl-X**, **y**, and **Enter** to save your changes and exit.
+
 3. Reboot your raspi with `sudo reboot`
 4. Once your raspi is online again, open a command prompt or terminal on a different computer and try to ping its new static IP (usually `ping 192.168.1.101`). If it works, log back into the raspi and try to ping out to the internet using IP (`ping 8.8.8.8`) and name (`ping google.ca`). If all three tests work, great! If not, check your work for errors. Otherwise, there may be a firewall blocking traffic in some way. Troubleshoot this before continuing.
 
@@ -94,6 +98,15 @@ When done, press **Ctrl-X**, **y**, and **Enter** to save your changes and exit.
 
 Physically connecting to the raspi using a monitor and keyboard is awkward. It's much easier to plug it into your network and power, then leave it tucked away. That's what **headless** is all about - connecting to your raspi's CLI using another computer on the same network, over the network using SSH.
 
-If you plan on being able to connect directly to your raspi CLI over the internet for some reason (not recommended), or are on a shared local network with nefarious individuals, I'd recommend changing away from the default SSH port. To do so, run `sudo nano /etc/ssh/sshd_config` and look for the first uncommented line that says **Port 22**. Change 22 to something of your choosing, save & exit, then restart the SSH service using `sudo service ssh restart`.
+>>>If you plan on being able to connect directly to your raspi CLI over the internet for some reason (not recommended), or are on a shared local network with nefarious individuals, I'd recommend changing away from the default SSH port. To do so, run `sudo nano /etc/ssh/sshd_config` and look for the first uncommented line that says **Port 22**. Change 22 to something of your choosing, save & exit, then restart the SSH service using `sudo service ssh restart`.
 
+Install a program on your usual computer capable of SSH connections. Traditionally this has been [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](PuTTY), but many others exist such as [https://github.com/jimradford/superputty](SuperPutty) or [https://mremoteng.org/download](mRemoteNG). Use this program to connect to `pi@192.168.1.101`, leaving the port to 22 unless you decided to change it. You should be prompted for the password you set earlier on using `raspi-config`, and gain access.
 
+If you could connect, congrats! You can now disconnect the monitor, keyboard and possibly mouse from your raspi and connect solely using your usual computer. If you couldn't connect, start troubleshooting. You might have the IP or port wrong (check `ifconfig` and `sudo less /etc/dhcpcd.conf`).
+
+## Review your accomplishments
+
+* Successfully booted your raspi using Rasbian Lite on an SD card
+* Run through some basic configuration
+* Made sure you were connected to the local network using a static IP
+* Enabled SSH connectivity from a different computer
