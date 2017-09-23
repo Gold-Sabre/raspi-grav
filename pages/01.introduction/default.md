@@ -11,7 +11,7 @@ Hi there! I want to provide step-by-step tutorials on how to set up and run vari
 
 ##### Things to note
 * This website is running on my **Raspberry Pi 2**, so that's promising
-* I'm using **Raspbian Jessie**. At the time of writing, the next version of Raspbian dubbed "Stretch" has been released; that being said, I don't plan on updating for a long while, or until the services I run are likely up to par.
+* I'm using **Raspbian Jessie**. At the time of writing, the next version of Raspbian dubbed "Stretch" has been released; however, I don't plan on updating until I know that issues have been ironed out.
 * Near the beginning I'll be more precise and long-winded, because my notes are also more detailed
 * As things get moving, I'll become more concise as both your understanding grows and my notes get thinner
 * As much as I'd like to give superbly thorough instructions all the way through, I'm not willing to re-build my raspi now that everything's configured and working harmoniously 
