@@ -69,7 +69,7 @@ $ sudo raspi-config
 
 ##### Configure your networking
 
->>>>> I'm assuming that your home network is in the local range 192.168.1.0/24. If you don't know, log into your router's web interface (usually http://192.168.1.1 or written on your router) and figure it out. Replace any IPs I use with what's appropriate for your network.
+>>>>> I'm assuming that your home network is in the local range 192.168.1.0/24. If you don't know, log into your router's web interface (usually [http://192.168.1.1](http://192.168.1.1) or written on your router) and figure it out. Replace any IPs I use with what's appropriate for your network.
 
 Let's get your raspi set up on your network. To start, visit your router's web interface and determine what your DHCP range is. This is the set of addresses your router will automatically hand out to devices that connect to it. We'll be setting your raspi's IP to a static value **outside** this DHCP range, so that any firewall rules we make later on can stay the same.
 
@@ -100,7 +100,7 @@ Physically connecting to the raspi using a monitor and keyboard is awkward. It's
 
 >>>If you plan on being able to connect directly to your raspi CLI over the internet for some reason (not recommended), or are on a shared local network with nefarious individuals, I'd recommend changing away from the default SSH port. To do so, run `sudo nano /etc/ssh/sshd_config` and look for the first uncommented line that says **Port 22**. Change 22 to something of your choosing, save & exit, then restart the SSH service using `sudo service ssh restart`.
 
-Install a program on your usual computer capable of SSH connections. Traditionally this has been [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](PuTTY), but many others exist such as [https://github.com/jimradford/superputty](SuperPutty) or [https://mremoteng.org/download](mRemoteNG). Use this program to connect to `pi@192.168.1.101`, leaving the port to 22 unless you decided to change it. You should be prompted for the password you set earlier on using `raspi-config`, and gain access.
+Install a program on your usual computer capable of SSH connections. Traditionally this has been [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), but many others exist such as [SuperPutty](https://github.com/jimradford/superputty) or [mRemoteNG](https://mremoteng.org/download). Use this program to connect to `pi@192.168.1.101`, leaving the port to 22 unless you decided to change it. You should be prompted for the password you set earlier on using `raspi-config`, and gain access.
 
 If you could connect, congrats! You can now disconnect the monitor, keyboard and possibly mouse from your raspi and connect solely using your usual computer. If you couldn't connect, start troubleshooting. You might have the IP or port wrong (check `ifconfig` and `sudo less /etc/dhcpcd.conf`).
 
