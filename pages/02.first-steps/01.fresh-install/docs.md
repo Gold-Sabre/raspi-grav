@@ -88,13 +88,12 @@ static domain_name_servers=8.8.8.8 8.8.4.4
 ```
 When done, press **Ctrl-X**, **y**, and **Enter** to save your changes and exit. 
 3. Reboot your raspi with `sudo reboot`
-4. Once your raspi is online again, open a command prompt or terminal on a different computer and try to ping its new static IP (usually `ping 192.168.1.101`). If it works, log back into the raspi and try to ping out to the internet using IP (`ping 8.8.8.8`) and name (`ping google.ca`)
+4. Once your raspi is online again, open a command prompt or terminal on a different computer and try to ping its new static IP (usually `ping 192.168.1.101`). If it works, log back into the raspi and try to ping out to the internet using IP (`ping 8.8.8.8`) and name (`ping google.ca`). If all three tests work, great! If not, check your work for errors. Otherwise, there may be a firewall blocking traffic in some way. Troubleshoot this before continuing.
 
-##### Running around headless
+##### Sitting around headless
 
 Physically connecting to the raspi using a monitor and keyboard is awkward. It's much easier to plug it into your network and power, then leave it tucked away. That's what **headless** is all about - connecting to your raspi's CLI using another computer on the same network, over the network using SSH.
 
-If you plan on being able to connect directly to your raspi CLI over the internet for some reason (not recommended), or are on a shared local network with nefarious individuals, I'd recommend changing away from the default SSH port. 
+If you plan on being able to connect directly to your raspi CLI over the internet for some reason (not recommended), or are on a shared local network with nefarious individuals, I'd recommend changing away from the default SSH port. To do so, run `sudo nano /etc/ssh/sshd_config` and look for the first uncommented line that says **Port 22**. Change 22 to something of your choosing, save & exit, then restart the SSH service using `sudo service ssh restart`.
 
-Run `sudo nano /etc/ssh/sshd_config` and look for the first uncommented line that says **Port 22**. Change 22 to something of your choosing, then restart the SSH service using `sudo service ssh restart`.
 
