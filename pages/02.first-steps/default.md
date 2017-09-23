@@ -2,4 +2,9 @@
 title: 'First Steps'
 ---
 
-#### The goal of this section is to get an operating system on your Raspberry Pi, make it headless (accessible via SSH), updated, and somewhat hardened. 
+##### Goals
+* **Install Raspbian** as your Raspberry Pi's operating system
+* Get your raspi's **basic configuration** and **updating** out of the way
+* Make it run **headless** (accessible via SSH from a different computer), rather than keeping a monitor, keyboard, etc. attached
+* Take steps to somewhat **harden** your raspi, since my guides will have it running services accessible to the internet 
+* Add a **testing branch** for updates that may be a better fit for a raspi vs. stable releases
