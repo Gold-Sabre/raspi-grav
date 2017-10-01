@@ -15,4 +15,4 @@ Hi there! I want to provide step-by-step tutorials on how to set up and run vari
 * Near the beginning I'll be more precise and long-winded, because my notes are also more detailed
 * As things get moving, I'll become more concise as both your understanding grows and my notes get thinner
 * As much as I'd like to give superbly thorough instructions all the way through, I'm not willing to re-build my raspi now that everything's configured and working harmoniously 
-* Most of my notes have been compiled by taking fragments of a solution from multiple locations and after hours of searching; as such, I can't source a lot of my content. **My goal isn't to write a paper; I want to record my experience for your benefit, not make you slog through Google!**
+* Most of my notes have been compiled by taking fragments of a solution from multiple locations and after hours of searching. As such, I didn't bother to source a lot of my content. I will when I can. **My goal isn't to write a paper with a huge bibliography; I want to record the results of my experiences for your benefit, not make you slog through Google!** 
